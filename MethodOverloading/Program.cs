@@ -17,19 +17,19 @@
         public static string Add(int a, int b, bool dollars)
         {
             var sum = a + b;
-            if (dollars && sum ==1)
+            if (dollars && sum ==1) // If I change this to if (dollars && sum == 1 || sum > 1) 
             {
-                return $"{sum} dollar"; 
+                return $"{sum} dollar"; // How would I change this statement to return dollar or dollars?
             }
-            else if (dollars && sum > 1)
-            {
-                return $"{sum} dollars";
+            else if (dollars && sum > 1) // Rider is calling this else redundant and that is the reason for the question
+            {                              // The method returns the correct results as is I am just wondering if there 
+                return $"{sum} dollars"; // is a way to tighten the code up some? 
             }
             return sum.ToString();
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(Add(5, 5));
+            Console.WriteLine(Add(5, 5)); 
             Console.WriteLine(Add(2.5m, 2.5m));
             Console.WriteLine(Add(1, 0, true));
             Console.WriteLine(Add(10, 20, true));
