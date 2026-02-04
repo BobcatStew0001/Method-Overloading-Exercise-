@@ -17,11 +17,11 @@
         public static string Add(int a, int b, bool dollars)
         {
             var sum = a + b;
-            if (dollars && sum ==1) // If I change this to if (dollars && sum == 1 || sum > 1) 
+            if (dollars == true && sum ==1) // If I change this to if (dollars && sum == 1 || sum > 1) 
             {
                 return $"{sum} dollar"; // How would I change this statement to return dollar or dollars?
             }
-            else if (dollars && sum > 1) // Rider is calling this else redundant and that is the reason for the question
+            else if (dollars == true && sum > 1) // Rider is calling this else redundant and that is the reason for the question
             {                              // The method returns the correct results as is I am just wondering if there 
                 return $"{sum} dollars"; // is a way to tighten the code up some? 
             }
